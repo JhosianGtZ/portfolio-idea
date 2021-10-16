@@ -29,7 +29,6 @@ body {
 }
 
 
-
 .container {
     width: 90%;
     max-width: 1440px;
@@ -51,6 +50,22 @@ body {
     z-index: 23;
 }
 
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-nav li{
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    height: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all .5s ease-in-out; 
+}
+
 .menu-bg {
     background-color: var(--background-pale);
 }
@@ -62,17 +77,17 @@ body {
     text-decoration: none;
     font-size: var(--paragraph);
     letter-spacing: 5%;
-    margin-left: 1rem;
     transition: all .5s ease-in-out;
+    text-align: center;
+    margin-left: 1rem;
 }
 
-.menu-nav a:hover , .menu-nav a:active {
+
+.menu-nav a:hover{
     color: var(--primary);
 }
 
-.active{
-    color: var(--primary);
-}
+
 
 .logo img {
     margin-left: 3rem;
@@ -611,37 +626,38 @@ input[type="checkbox"] {
         line-height: 32px;
     }
 
-  .contact-social {
-    width: 100%;
-    height: 120px;
-    text-align: center;
-    margin: 0 auto;
-}
+    .contact-social {
+        width: 100%;
+        height: 120px;
+        text-align: center;
+        margin: 0 auto;
+    }
 
-.contact-social a {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--primary);
-    font-size: 30px;
-    margin-left: 1rem;
-    width: 60px;
-    height: 60px;
-    background-color: var(--background);
-    text-align: center;
-    border-radius: 50%;
-    line-height: 60px;
-    transition: all 1s ease-out;
-}
+    .contact-social a {
+        display: inline-block;
+        text-decoration: none;
+        color: var(--primary);
+        font-size: 30px;
+        margin-left: 1rem;
+        width: 60px;
+        height: 60px;
+        background-color: var(--background);
+        text-align: center;
+        border-radius: 50%;
+        line-height: 60px;
+        transition: all 1s ease-out;
+    }
 
-.contact-social i {
-    line-height: 60px;
-}
+    .contact-social i {
+        line-height: 60px;
+    }
 
-.footer p{
-    font-size: 13px;
-}
-.logo{
-    margin-left: -2rem;
-}
+    .footer p {
+        font-size: 13px;
+    }
+
+    .logo {
+        margin-left: -2rem;
+    }
 
 }
