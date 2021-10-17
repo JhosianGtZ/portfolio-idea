@@ -1,0 +1,76 @@
+/* Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Lexend Deca font*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400&display=swap');
+
+
+$background: #111;
+$primary: #FCA311;
+$montserrat:'Montserrat',sans-serif;
+$text-color: #f3f3f3;
+$heading-1: 55px;
+$heading-2: 45px;
+$paragraph: 16px;
+$lexend: 'Lexend Deca',sans-serif;
+
+.header {
+    width: 100%;
+    background-image: linear-gradient(120deg, rgba(17, 17, 17, .8) 0%, rgba(0, 0, 0, .1) 100%),
+        url("../images/francesco-ungaro-jqKS0ET-wGE-unsplash.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    /* Photo by <a href="https://unsplash.com/@francesco_ungaro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Francesco Ungaro</a> on <a href="https://unsplash.com/s/photos/solid-background?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   */
+
+}
+
+.text-container {
+    margin-top: 5rem;
+    height: 500px;
+}
+
+.paragraph {
+    font-family: $lexend;
+    font-weight: 300;
+    color: $text-color;
+    text-decoration: none;
+    font-size: $paragraph;
+    letter-spacing: 5%;
+    transition: all .5s ease-in-out;
+    margin: 2rem 0;
+}
+
+.hero p {
+    color: var(--primary);
+}
+
+.hero {
+    height: 700px;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+    font-size: var(--heading-1);
+    line-height: 70px;
+}
+
+.hero b {
+    color: var(--primary);
+}
+
+.wave {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
