@@ -90,7 +90,7 @@
 }
 
 .hero {
-  height: 700px;
+  height: 100vh;
 }
 
 .hero h1 {
@@ -99,8 +99,8 @@
   font-weight: 600;
   color: #f3f3f3;
   text-align: center;
-  line-height: 100px;
   margin: 0 auto;
+  line-height: 100px;
 }
 
 .hero b {
@@ -647,12 +647,14 @@ input[type=checkbox] {
   .hero h1 {
     font-size: 50px;
     text-align: center;
+    line-height: 50px;
   }
 }
 @media screen and (max-width: 500px) {
   .hero h1 {
     font-size: 35px;
     text-align: center;
+    line-height: 50px;
   }
 
   .section-title {

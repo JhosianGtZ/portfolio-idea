@@ -34,9 +34,8 @@ sans-serif;
     font-weight: 600;
     color: $text-color;
     text-align: center;
-    line-height: 100px;
-    
     margin: 0 auto;
+    line-height: 100px;
 }
 @mixin flex-btwn-center {
     display: flex;
@@ -131,7 +130,7 @@ sans-serif;
 
 
 .hero {
-    height: 700px;
+    height: 100vh;
 }
 
 .hero {
