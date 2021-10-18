@@ -1,0 +1,139 @@
+/* Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Lexend Deca font*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400&display=swap');
+
+
+$background: #111;
+$background-pale: rgba(17, 17, 17,0.9);
+$primary: #FCA311;
+$montserrat:'Montserrat',
+sans-serif;
+$text-color: #f3f3f3;
+$heading-1: 55px;
+$heading-2: 45px;
+$paragraph: 16px;
+$lexend: 'Lexend Deca',
+sans-serif;
+
+
+@mixin container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+@mixin normalize {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@mixin flex-btwn-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-evly-center {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@mixin text {
+    font-family: $lexend;
+    font-weight: 300;
+    font-size: $paragraph;
+    letter-spacing: 5%;
+    color: $text-color;
+}
+
+@mixin heading2{
+    display: inline-block;
+    font-family: $montserrat;
+    font-size: $heading-2;
+    text-align: center;
+    width: 100%;
+    margin-top: 3.5rem;
+    margin-bottom: 60px;
+    margin-top: 90px
+}
+
+@mixin button {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    background-color: $background;
+    color: $text-color;
+    width: 180px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    transition: all .5s ease-out;
+}
+
+
+/* Projects */
+
+.projects {
+    position: relative;
+    width: 100%;
+    background-image: linear-gradient(120deg, rgba(17, 17, 17, .8) 0%, rgba(0, 0, 0, .1) 100%),
+        url("../images/francesco-ungaro-jqKS0ET-wGE-unsplash.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.projects h2 {
+    color: $primary;
+}
+
+.projects-container {
+    @include flex-evly-center;
+    flex-direction: column;
+    margin-bottom: 7rem;
+}
+
+.project {
+    @include flex-evly-center;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #ccc;
+    width: 70%;
+    height: 300px;
+    margin-bottom: 4rem;
+    text-align: left;
+    border-radius: 9px;
+}
+
+.project-title {
+    font-family: $montserrat;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 30px;
+    color: $primary;
+}
+
+.project-description {
+    @include text;
+    color: $background;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-button {
+    @include button;
+}
+
+.project-button:hover {
+    transform: translateX(1rem);
+    color: $primary;
+}

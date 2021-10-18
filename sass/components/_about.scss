@@ -1,0 +1,240 @@
+$background: #111;
+$background-pale: rgba(17, 17, 17, 0.9);
+$primary: #FCA311;
+$montserrat:'Montserrat',
+sans-serif;
+$text-color: #f3f3f3;
+$heading-1: 55px;
+$heading-2: 45px;
+$paragraph: 16px;
+$lexend: 'Lexend Deca',
+sans-serif;
+
+
+@mixin container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+@mixin normalize {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@mixin flex-btwn-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-evly-center {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@mixin text {
+    font-family: $lexend;
+    font-weight: 300;
+    font-size: $paragraph;
+    letter-spacing: 5%;
+    color: $text-color;
+}
+
+@mixin heading2 {
+    display: inline-block;
+    font-family: $montserrat;
+    font-size: $heading-2;
+    text-align: center;
+    width: 100%;
+    margin-top: 3.5rem;
+    margin-bottom: 60px;
+    margin-top: 90px
+}
+
+
+
+/* About Me section */
+
+
+.about {
+    position: relative;
+    background-color: $primary;
+
+}
+
+.about-container {
+    position: relative;
+    @include flex-evly-center;
+    flex-wrap: wrap;
+
+}
+
+.section-title {
+    @include heading2;
+}
+
+
+.about-photo {
+    width: 35%;
+    margin-bottom: 90px;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 360px;
+}
+
+.about-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-text p {
+    font-family: $lexend;
+    font-size: 19px;
+    line-height: 38px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.about-icons {
+    height: 220px;
+    width: 400px;
+    @include flex-evly-center;
+    align-items: baseline;
+
+}
+
+.about-icons i {
+    font-size: 60px;
+}
+
+.about-icons :nth-child(1) {
+    animation: html 5s infinite ease-in-out;
+}
+
+.about-icons :nth-child(2) {
+    animation: css 5s infinite ease-in-out;
+}
+.about-icons :nth-child(3) {
+    animation: js 5s infinite ease-in-out;
+}
+
+.about-icons :nth-child(4) {
+    animation: figma 5s infinite ease-in-out;
+}
+
+
+
+@keyframes html {
+    0% {
+        color: rgba(227, 79, 38, 1);
+    }
+
+    50% {
+        color: rgba(227, 79, 38, 0.5);
+    }
+
+    75% {
+        color: rgba(227, 79, 38, 0.7);
+    }
+
+    100% {
+        color: rgba(227, 79, 38, 1);
+    }
+}
+
+@keyframes js {
+    0% {
+        color: rgb(239, 216, 29);
+    }
+
+    50% {
+        color: rgb(239, 216, 29, 0.5);
+    }
+
+    75% {
+        color: rgb(239, 216, 29, 0.7 );
+    }
+
+    100% {
+        color: rgb(239, 216, 29);
+    }
+}
+
+
+@keyframes css {
+    0% {
+        color: rgb(39, 96, 229);
+    }
+
+    50% {
+        color: rgba(39, 96, 229, 0.5);
+    }
+
+    75% {
+        color: rgba(39, 96, 229, 0.7);
+    }
+
+    100% {
+        color: rgb(39, 96, 229);
+    }
+}
+
+
+
+@keyframes figma {
+    0% {
+        color: rgb(242, 78, 30);
+    }
+
+    25% {
+        color:rgba(255, 114, 98, .7);
+    }
+
+    50% {
+        color: rgb(162, 89, 255, .6);
+    }
+
+    75% {
+        color: rgba(26, 188, 254, .5);
+    }
+    90%{
+        color:rgb(9, 196, 125,.3 );
+    }
+    100%{
+        color: rgb(242, 78, 30); 
+    }
+}
+
+
+.about-icons i:hover {
+    cursor: pointer;
+}
+
+.about-icons :nth-child(1):hover {
+    color: #e34f26;
+}
+
+.about-icons :nth-child(2):hover {
+    color: #2760E5;
+}
+
+.about-icons :nth-child(3):hover {
+    color: #EFD81D;
+}
+
+.about-icons :nth-child(4):hover {
+    color: #09C47D;
+
+}

@@ -1,4 +1,16 @@
+// Home 
 @use 'components/home';
+
+// About Section
+@use 'components/about';
+
+
+// Projects section
+@use 'components/projects';
+
+// Contact Section
+@use 'components/contact';
+
 
 /* Montserrat font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
@@ -8,13 +20,16 @@
 
 
 $background: #111;
+$background-pale: rgba(17, 17, 17, 0.9);
 $primary: #FCA311;
-$montserrat:'Montserrat',sans-serif;
+$montserrat:'Montserrat',
+sans-serif;
 $text-color: #f3f3f3;
 $heading-1: 55px;
 $heading-2: 45px;
 $paragraph: 16px;
-$lexend: 'Lexend Deca',sans-serif;
+$lexend: 'Lexend Deca',
+sans-serif;
 
 
 @mixin container {
@@ -44,8 +59,23 @@ $lexend: 'Lexend Deca',sans-serif;
     align-items: center;
 }
 
-@mixin paragraph {
-    
+@mixin text {
+    font-family: $lexend;
+    font-weight: 300;
+    font-size: $paragraph;
+    letter-spacing: 5%;
+    color: $text-color;
+}
+
+@mixin heading2 {
+    display: inline-block;
+    font-family: $montserrat;
+    font-size: $heading-2;
+    text-align: center;
+    width: 100%;
+    margin-top: 3.5rem;
+    margin-bottom: 60px;
+    margin-top: 90px
 }
 
 
@@ -59,9 +89,12 @@ body {
     font-family: $montserrat;
 }
 
+
+
 .container {
     @include container;
 }
+
 
 .menu-nav {
     position: fixed;
@@ -90,16 +123,13 @@ ul {
 }
 
 .menu-bg {
-    background-color: var(--background-pale);
+    background-color: $background-pale;
 }
 
 .menu-nav a {
-    font-family: $lexend;
-    font-weight: 300;
-    color: $text-color;
+
+    @include text;
     text-decoration: none;
-    font-size: $paragraph;
-    letter-spacing: 5%;
     transition: all .5s ease-in-out;
     text-align: center;
     margin-left: 1rem;
@@ -107,7 +137,7 @@ ul {
 
 
 .menu-nav a:hover {
-    color: var(--primary);
+    color: $primary;
 }
 
 
@@ -129,254 +159,6 @@ input[type="checkbox"] {
 
 
 
-/* About Me section */
-
-
-.about {
-    position: relative;
-    /* height: 100vh; */
-    background-color: var(--primary);
-
-}
-
-.about-container {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: center;
-}
-
-.section-title {
-    display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--heading-2);
-    text-align: center;
-    width: 100%;
-    margin-top: 3.5rem;
-    margin-bottom: 60px;
-}
-
-
-.about-photo {
-    width: 35%;
-    margin-bottom: 90px;
-}
-
-.about-photo img {
-    width: 100%;
-}
-
-.about-text {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.about-text p {
-    font-family: 'Lexend Deca', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 19px;
-    line-height: 32px;
-    margin-bottom: 60px;
-    text-align: center;
-}
-
-.about-icons {
-    height: 220px;
-    width: 400px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.about-icons i {
-    font-size: 60px;
-}
-
-.about-icons i:hover {
-    cursor: pointer;
-}
-
-.about-icons :nth-child(1):hover {
-    color: #e34f26;
-}
-
-.about-icons :nth-child(2):hover {
-    color: #2760E5;
-}
-
-.about-icons :nth-child(3):hover {
-    color: #EFD81D;
-}
-
-.about-icons :nth-child(4):hover {
-    color: #09C47D;
-
-}
-
-
-/* Projects */
-
-.projects {
-    position: relative;
-    background-color: var(--background);
-}
-
-.projects h2 {
-    color: var(--primary);
-}
-
-.projects-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 7rem;
-}
-
-.project {
-
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #ccc;
-    width: 70%;
-    height: 300px;
-    margin-bottom: 4rem;
-    text-align: left;
-    border-radius: 9px;
-}
-
-.project-title {
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 2rem;
-    margin-bottom: 1rem;
-    font-size: 30px;
-    color: var(--primary);
-}
-
-.project-description {
-    font-family: 'Lexend Deca', sans-serif;
-    margin-left: 2rem;
-    margin-bottom: 1rem;
-}
-
-.project-button {
-    margin-left: 2rem;
-    margin-bottom: 1rem;
-    display: inline-block;
-    text-decoration: none;
-    background-color: var(--background);
-    color: var(--text-color);
-    width: 180px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    transition: all .5s ease-out;
-
-}
-
-.project-button:hover {
-    transform: translateX(1rem);
-    color: var(--primary);
-}
-
-/* Contact */
-
-.contact {
-    background-color: var(--primary);
-}
-
-.contact h2 {
-    margin-bottom: 1rem;
-}
-
-.p-contact {
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 35px;
-    text-align: center;
-    color: var(--background);
-}
-
-.contact-social {
-    width: 90%;
-    height: 120px;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.contact-social a {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--primary);
-    font-size: 30px;
-    margin-left: 1rem;
-    width: 60px;
-    height: 60px;
-    background-color: var(--background);
-    text-align: center;
-    border-radius: 50%;
-    line-height: 60px;
-    transition: all 1s ease-out;
-}
-
-.contact-social i {
-    line-height: 60px;
-}
-
-.contact-social a:hover {
-    color: var(--primary);
-    background-color: var(--background);
-    border-radius: 0 1rem 0 1rem;
-}
-
-/* Footer */
-
-.footer {
-    z-index: 22;
-    position: relative;
-    background-color: var(--primary);
-    background-image: url('../images/Vectorwave-2.svg');
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-container p {
-
-    margin-top: 15rem;
-    font-family: 'Lexend Deca', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-
-    /* identical to box height */
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-
-    color: #FCA311;
-
-
-}
-
-.footer-container img {
-    margin-top: 10rem;
-    width: 60px;
-}
-
-
 /* Mailto custom css */
 
 
@@ -386,39 +168,39 @@ input[type="checkbox"] {
 }
 
 .mailtoui-modal-head {
-    background-color: var(--background-pale);
+    background-color: $background-pale;
 }
 
 .mailtoui-modal-title {
-    color: var(--primary);
+    color: $primary;
 }
 
 .mailtoui-modal-close:focus,
 .mailtoui-modal-close:hover {
-    color: var(--primary);
+    color: $primary;
 }
 
 .mailtoui-modal-body {
-    background-color: var(--background);
+    background-color: $background;
 }
 
 .mailtoui-button:focus .mailtoui-button-content {
-    background-color: var(--primary);
-    color: var(--text-color);
+    background-color: $primary;
+    color: $text-color;
 }
 
 .mailtoui-button-content,
 .mailtoui-button-copy {
-    background-color: var(--background);
-    color: var(--text-color);
+    background-color: $background;
+    color: $text-color;
 }
 
 .mailtoui-button-content:hover,
 .mailtoui-button-content:focus,
 .mailtoui-button-copy:hover,
 .mailtoui-button-copy:focus {
-    background-color: var(--primary);
-    color: var(--text-color);
+    background-color: $primary;
+    color: $text-color;
     ;
 }
 
@@ -426,12 +208,12 @@ input[type="checkbox"] {
 .mailtoui-button-copy-clicked:hover,
 .mailtoui-button-copy-clicked:focus {
     background-color: #1F9D55;
-    color: var(--text-color);
+    color: $text-color;
 }
 
 .mailtoui-email-address {
-    background-color: var(--background);
-    color: var(--primary);
+    background-color: $background;
+    color: $primary;
 }
 
 /* Responsive */
@@ -448,7 +230,7 @@ input[type="checkbox"] {
     }
 
     label span {
-        background: var(--primary);
+        background: $primary;
         border-radius: 10px;
         height: 7px;
         margin: 7px 0;
@@ -506,7 +288,7 @@ input[type="checkbox"] {
         position: fixed;
         top: 80px;
         bottom: 0;
-        background-color: var(--background);
+        background-color: $background;
         width: 100%;
         left: 0;
         display: flex;
@@ -530,6 +312,13 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 700px) {
+
+    .text-container {
+        .paragraph {
+            text-align: center;
+        }
+    }
+
     .about-icons {
         height: 220px;
         width: 200px;
@@ -554,7 +343,7 @@ input[type="checkbox"] {
     }
 
     .about-photo {
-        width: 70%;
+        width: 90%;
     }
 
     .about-photo img {
@@ -570,6 +359,7 @@ input[type="checkbox"] {
 @media screen and (max-width: 600px) {
     .hero h1 {
         font-size: 50px;
+        text-align: center;
     }
 
 }
@@ -578,6 +368,7 @@ input[type="checkbox"] {
 
     .hero h1 {
         font-size: 35px;
+        text-align: center;
     }
 
     .section-title {
@@ -599,12 +390,12 @@ input[type="checkbox"] {
     .contact-social a {
         display: inline-block;
         text-decoration: none;
-        color: var(--primary);
+        color: $primary;
         font-size: 30px;
         margin-left: 1rem;
         width: 60px;
         height: 60px;
-        background-color: var(--background);
+        background-color: $background;
         text-align: center;
         border-radius: 50%;
         line-height: 60px;

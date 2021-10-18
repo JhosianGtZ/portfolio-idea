@@ -6,6 +6,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 /* Lexend Deca font*/
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400&display=swap");
+/* Montserrat font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+/* Lexend Deca font*/
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400&display=swap");
+/* Montserrat font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+/* Lexend Deca font*/
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400&display=swap");
 .header {
   width: 100%;
   background-image: linear-gradient(120deg, rgba(17, 17, 17, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%), url("../images/francesco-ungaro-jqKS0ET-wGE-unsplash.jpg");
@@ -22,19 +30,63 @@
   height: 500px;
 }
 
+.hero-cta {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+.hero-cta p, .hero-cta a, .hero-cta i {
+  text-align: center;
+}
+.hero-cta p {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 5%;
+  color: #FCA311;
+  margin-bottom: 2rem;
+}
+.hero-cta a, .hero-cta i {
+  display: inline-block;
+  text-decoration: none;
+  color: #FCA311;
+  text-align: center;
+  animation: jump 1s infinite ease-in;
+  transform: translateY(0);
+}
+.hero-cta i {
+  font-size: 45px;
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(2.5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(7.5px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
 .paragraph {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 300;
-  color: #f3f3f3;
-  text-decoration: none;
   font-size: 16px;
   letter-spacing: 5%;
+  color: #f3f3f3;
+  text-decoration: none;
   transition: all 0.5s ease-in-out;
   margin: 2rem 0;
-}
-
-.hero p {
-  color: var(--primary);
+  color: #FCA311;
 }
 
 .hero {
@@ -43,25 +95,302 @@
 
 .hero h1 {
   font-family: "Montserrat", sans-serif;
+  font-size: 90px;
   font-weight: 600;
-  color: var(--text-color);
+  color: #f3f3f3;
   text-align: center;
-  font-size: var(--heading-1);
-  line-height: 70px;
+  line-height: 100px;
+  margin: 0 auto;
 }
 
 .hero b {
-  color: var(--primary);
+  color: #FCA311;
 }
 
-.wave {
+/* About Me section */
+.about {
+  position: relative;
+  background-color: #FCA311;
+}
+
+.about-container {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section-title {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+  text-align: center;
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
+  margin-top: 3.5rem;
+  margin-bottom: 60px;
+  margin-top: 90px;
+}
+
+.about-photo {
+  width: 35%;
+  margin-bottom: 90px;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 360px;
+}
+
+.about-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about-text p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 19px;
+  line-height: 38px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.about-icons {
+  height: 220px;
+  width: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-items: baseline;
+}
+
+.about-icons i {
+  font-size: 60px;
+}
+
+.about-icons :nth-child(1) {
+  animation: html 5s infinite ease-in-out;
+}
+
+.about-icons :nth-child(2) {
+  animation: css 5s infinite ease-in-out;
+}
+
+.about-icons :nth-child(3) {
+  animation: js 5s infinite ease-in-out;
+}
+
+.about-icons :nth-child(4) {
+  animation: figma 5s infinite ease-in-out;
+}
+
+@keyframes html {
+  0% {
+    color: #e34f26;
+  }
+  50% {
+    color: rgba(227, 79, 38, 0.5);
+  }
+  75% {
+    color: rgba(227, 79, 38, 0.7);
+  }
+  100% {
+    color: #e34f26;
+  }
+}
+@keyframes js {
+  0% {
+    color: #efd81d;
+  }
+  50% {
+    color: rgba(239, 216, 29, 0.5);
+  }
+  75% {
+    color: rgba(239, 216, 29, 0.7);
+  }
+  100% {
+    color: #efd81d;
+  }
+}
+@keyframes css {
+  0% {
+    color: #2760e5;
+  }
+  50% {
+    color: rgba(39, 96, 229, 0.5);
+  }
+  75% {
+    color: rgba(39, 96, 229, 0.7);
+  }
+  100% {
+    color: #2760e5;
+  }
+}
+@keyframes figma {
+  0% {
+    color: #f24e1e;
+  }
+  25% {
+    color: rgba(255, 114, 98, 0.7);
+  }
+  50% {
+    color: rgba(162, 89, 255, 0.6);
+  }
+  75% {
+    color: rgba(26, 188, 254, 0.5);
+  }
+  90% {
+    color: rgba(9, 196, 125, 0.3);
+  }
+  100% {
+    color: #f24e1e;
+  }
+}
+.about-icons i:hover {
+  cursor: pointer;
+}
+
+.about-icons :nth-child(1):hover {
+  color: #e34f26;
+}
+
+.about-icons :nth-child(2):hover {
+  color: #2760E5;
+}
+
+.about-icons :nth-child(3):hover {
+  color: #EFD81D;
+}
+
+.about-icons :nth-child(4):hover {
+  color: #09C47D;
+}
+
+/* Projects */
+.projects {
+  position: relative;
+  width: 100%;
+  background-image: linear-gradient(120deg, rgba(17, 17, 17, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%), url("../images/francesco-ungaro-jqKS0ET-wGE-unsplash.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.projects h2 {
+  color: #FCA311;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 7rem;
+}
+
+.project {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #ccc;
+  width: 70%;
+  height: 300px;
+  margin-bottom: 4rem;
+  text-align: left;
+  border-radius: 9px;
+}
+
+.project-title {
+  font-family: "Montserrat", sans-serif;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 30px;
+  color: #FCA311;
+}
+
+.project-description {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 5%;
+  color: #f3f3f3;
+  color: #111;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.project-button {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #111;
+  color: #f3f3f3;
+  width: 180px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  transition: all 0.5s ease-out;
+}
+
+.project-button:hover {
+  transform: translateX(1rem);
+  color: #FCA311;
+}
+
+/* Contact */
+.contact {
+  background-color: #FCA311;
+}
+
+.contact h2 {
+  margin-bottom: 1rem;
+}
+
+.p-contact {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 35px;
+  text-align: center;
+  color: #111;
+}
+
+.contact-social {
+  width: 90%;
+  height: 120px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact-social a {
+  display: inline-block;
+  text-decoration: none;
+  color: #FCA311;
+  font-size: 30px;
+  margin-left: 1rem;
+  width: 60px;
+  height: 60px;
+  background-color: #111;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 60px;
+  transition: all 1s ease-out;
+}
+
+.contact-social i {
+  line-height: 60px;
+}
+
+.contact-social a:hover {
+  color: #FCA311;
+  background-color: #111;
+  border-radius: 0 1rem 0 1rem;
 }
 
 * {
@@ -114,23 +443,23 @@ ul {
 }
 
 .menu-bg {
-  background-color: var(--background-pale);
+  background-color: rgba(17, 17, 17, 0.9);
 }
 
 .menu-nav a {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 300;
-  color: #f3f3f3;
-  text-decoration: none;
   font-size: 16px;
   letter-spacing: 5%;
+  color: #f3f3f3;
+  text-decoration: none;
   transition: all 0.5s ease-in-out;
   text-align: center;
   margin-left: 1rem;
 }
 
 .menu-nav a:hover {
-  color: var(--primary);
+  color: #FCA311;
 }
 
 .logo img {
@@ -147,237 +476,6 @@ input[type=checkbox] {
   display: none;
 }
 
-/* About Me section */
-.about {
-  position: relative;
-  /* height: 100vh; */
-  background-color: var(--primary);
-}
-
-.about-container {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: center;
-}
-
-.section-title {
-  display: inline-block;
-  font-family: "Montserrat", sans-serif;
-  font-size: var(--heading-2);
-  text-align: center;
-  width: 100%;
-  margin-top: 3.5rem;
-  margin-bottom: 60px;
-}
-
-.about-photo {
-  width: 35%;
-  margin-bottom: 90px;
-}
-
-.about-photo img {
-  width: 100%;
-}
-
-.about-text {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.about-text p {
-  font-family: "Lexend Deca", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 19px;
-  line-height: 32px;
-  margin-bottom: 60px;
-  text-align: center;
-}
-
-.about-icons {
-  height: 220px;
-  width: 400px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.about-icons i {
-  font-size: 60px;
-}
-
-.about-icons i:hover {
-  cursor: pointer;
-}
-
-.about-icons :nth-child(1):hover {
-  color: #e34f26;
-}
-
-.about-icons :nth-child(2):hover {
-  color: #2760E5;
-}
-
-.about-icons :nth-child(3):hover {
-  color: #EFD81D;
-}
-
-.about-icons :nth-child(4):hover {
-  color: #09C47D;
-}
-
-/* Projects */
-.projects {
-  position: relative;
-  background-color: var(--background);
-}
-
-.projects h2 {
-  color: var(--primary);
-}
-
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 7rem;
-}
-
-.project {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: #ccc;
-  width: 70%;
-  height: 300px;
-  margin-bottom: 4rem;
-  text-align: left;
-  border-radius: 9px;
-}
-
-.project-title {
-  font-family: "Montserrat", sans-serif;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
-  font-size: 30px;
-  color: var(--primary);
-}
-
-.project-description {
-  font-family: "Lexend Deca", sans-serif;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
-}
-
-.project-button {
-  margin-left: 2rem;
-  margin-bottom: 1rem;
-  display: inline-block;
-  text-decoration: none;
-  background-color: var(--background);
-  color: var(--text-color);
-  width: 180px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  transition: all 0.5s ease-out;
-}
-
-.project-button:hover {
-  transform: translateX(1rem);
-  color: var(--primary);
-}
-
-/* Contact */
-.contact {
-  background-color: var(--primary);
-}
-
-.contact h2 {
-  margin-bottom: 1rem;
-}
-
-.p-contact {
-  font-family: "Lexend Deca", sans-serif;
-  font-size: 35px;
-  text-align: center;
-  color: var(--background);
-}
-
-.contact-social {
-  width: 90%;
-  height: 120px;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.contact-social a {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--primary);
-  font-size: 30px;
-  margin-left: 1rem;
-  width: 60px;
-  height: 60px;
-  background-color: var(--background);
-  text-align: center;
-  border-radius: 50%;
-  line-height: 60px;
-  transition: all 1s ease-out;
-}
-
-.contact-social i {
-  line-height: 60px;
-}
-
-.contact-social a:hover {
-  color: var(--primary);
-  background-color: var(--background);
-  border-radius: 0 1rem 0 1rem;
-}
-
-/* Footer */
-.footer {
-  z-index: 22;
-  position: relative;
-  background-color: var(--primary);
-  background-image: url("../images/Vectorwave-2.svg");
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-container p {
-  margin-top: 15rem;
-  font-family: "Lexend Deca", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  /* identical to box height */
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #FCA311;
-}
-
-.footer-container img {
-  margin-top: 10rem;
-  width: 60px;
-}
-
 /* Mailto custom css */
 .mailtoui-modal {
   background-color: rgba(250, 250, 250, 0.5);
@@ -385,51 +483,51 @@ input[type=checkbox] {
 }
 
 .mailtoui-modal-head {
-  background-color: var(--background-pale);
+  background-color: rgba(17, 17, 17, 0.9);
 }
 
 .mailtoui-modal-title {
-  color: var(--primary);
+  color: #FCA311;
 }
 
 .mailtoui-modal-close:focus,
 .mailtoui-modal-close:hover {
-  color: var(--primary);
+  color: #FCA311;
 }
 
 .mailtoui-modal-body {
-  background-color: var(--background);
+  background-color: #111;
 }
 
 .mailtoui-button:focus .mailtoui-button-content {
-  background-color: var(--primary);
-  color: var(--text-color);
+  background-color: #FCA311;
+  color: #f3f3f3;
 }
 
 .mailtoui-button-content,
 .mailtoui-button-copy {
-  background-color: var(--background);
-  color: var(--text-color);
+  background-color: #111;
+  color: #f3f3f3;
 }
 
 .mailtoui-button-content:hover,
 .mailtoui-button-content:focus,
 .mailtoui-button-copy:hover,
 .mailtoui-button-copy:focus {
-  background-color: var(--primary);
-  color: var(--text-color);
+  background-color: #FCA311;
+  color: #f3f3f3;
 }
 
 .mailtoui-button-copy-clicked,
 .mailtoui-button-copy-clicked:hover,
 .mailtoui-button-copy-clicked:focus {
   background-color: #1F9D55;
-  color: var(--text-color);
+  color: #f3f3f3;
 }
 
 .mailtoui-email-address {
-  background-color: var(--background);
-  color: var(--primary);
+  background-color: #111;
+  color: #FCA311;
 }
 
 /* Responsive */
@@ -443,7 +541,7 @@ input[type=checkbox] {
   }
 
   label span {
-    background: var(--primary);
+    background: #FCA311;
     border-radius: 10px;
     height: 7px;
     margin: 7px 0;
@@ -486,7 +584,7 @@ input[type=checkbox] {
     position: fixed;
     top: 80px;
     bottom: 0;
-    background-color: var(--background);
+    background-color: #111;
     width: 100%;
     left: 0;
     display: flex;
@@ -506,6 +604,10 @@ input[type=checkbox] {
   }
 }
 @media screen and (max-width: 700px) {
+  .text-container .paragraph {
+    text-align: center;
+  }
+
   .about-icons {
     height: 220px;
     width: 200px;
@@ -529,7 +631,7 @@ input[type=checkbox] {
   }
 
   .about-photo {
-    width: 70%;
+    width: 90%;
   }
 
   .about-photo img {
@@ -544,11 +646,13 @@ input[type=checkbox] {
 @media screen and (max-width: 600px) {
   .hero h1 {
     font-size: 50px;
+    text-align: center;
   }
 }
 @media screen and (max-width: 500px) {
   .hero h1 {
     font-size: 35px;
+    text-align: center;
   }
 
   .section-title {
@@ -570,12 +674,12 @@ input[type=checkbox] {
   .contact-social a {
     display: inline-block;
     text-decoration: none;
-    color: var(--primary);
+    color: #FCA311;
     font-size: 30px;
     margin-left: 1rem;
     width: 60px;
     height: 60px;
-    background-color: var(--background);
+    background-color: #111;
     text-align: center;
     border-radius: 50%;
     line-height: 60px;
